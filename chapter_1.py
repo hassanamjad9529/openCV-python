@@ -1,14 +1,14 @@
 import cv2
 import numpy as np
 
-img = np.zeros((512, 512, 3), np.uint8)
-# print(img)
-# img[:]= 255, 0,0
-cv2.line(img, (0,0),(img.shape[1],img.shape[0]), (0,255,0), 3)
+img = cv2.imread("Resources/whatsapp.jpeg")
+print(img.shape)
+imgResize = cv2.resize(img, (300,900))
+print(imgResize.shape)
+
+imgCropped = img[0:200]
 
 
-cv2.imshow("image", img)
-
-
-
+cv2.imshow("Original Image", img)
+cv2.imshow("Resized Image", imgResize)
 cv2.waitKey(0)
