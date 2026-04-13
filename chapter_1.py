@@ -12,4 +12,5 @@ for (x, y, w, h) in faces:
 
 
 cv2.imshow("Man", img)
+cv2.imshow("Man", img)
 cv2.waitKey(0)
